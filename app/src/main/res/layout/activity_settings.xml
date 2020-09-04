@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.classyinc.noteit.activities.SettingsActivity"
+    android:background="@color/ColorDark"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        app:title="@string/Settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorDark"
+        android:theme="@style/Toolbar"
+        android:id="@+id/Settings_toolbar_id"/>
+
+
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Light mode"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        android:fontFamily="@font/ubuntu_medium"
+        android:id="@+id/switch_mode_id"
+        android:textColor="@color/ColorWhite"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:padding="@dimen/_10sdp"
+        tools:ignore="HardcodedText" />
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/other_apps_from_classy_inc"
+        android:fontFamily="@font/ubuntu_regular"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/ColorNote5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:riv_corner_radius_top_left="@dimen/_10sdp"
+            app:riv_corner_radius_top_right="@dimen/_10sdp"
+            tools:ignore="MissingPrefix"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/ColorYellow"
+                android:text="@string/ad"
+                android:padding="@dimen/_5sdp"
+                app:riv_corner_radius_top_left="10dp"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:includeFontPadding="false"
+                android:text="@string/income_and_expense_tracker_app"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/_12ssp"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/sponsored"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/ColorYellow" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:contentDescription="@string/app_name"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/ic_screenshot_1_600_"/>
+
+            <ImageView
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:contentDescription="@string/app_name"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/ic_screenshot_2_600"/>
+
+            <ImageView
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:contentDescription="@string/app_name"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:src="@drawable/ic_screenshot_6_600"/>
+
+        </LinearLayout>
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/ubuntu_regular"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="@string/classy_inc1"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="visible" />
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/ubuntu_regular"
+            android:includeFontPadding="false"
+            android:text="@string/find_your_spending_leaks"
+            android:textColor="@color/ColorNoteSubtitleText"
+            android:textSize="@dimen/_15ssp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/ubuntu_regular"
+            android:includeFontPadding="false"
+            android:text="@string/by_clicking_the_install_button_you_will_be_directed_to_google_playstore"
+            android:textColor="@color/ColorDelete"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/Install_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/ColorNote4"
+                android:fontFamily="@font/ubuntu_bold"
+                android:includeFontPadding="false"
+                android:padding="@dimen/_1sdp"
+                android:text="@string/install_now"
+                android:textColor="@color/ColorNoteSubtitleText"
+
+                android:maxLines="1"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

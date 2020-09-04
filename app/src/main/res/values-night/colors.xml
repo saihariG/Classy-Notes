@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="ColorDark">#292929</color>
+    <color name="ColorYellow">#FDBE3B</color>
+    <color name="ColorWhite">#FFFFFF</color>
+    <color name="ColorSearchIcon">#DBDBDB</color>
+    <color name="ColorTextInput">#787878</color>
+    <color name="ColorQuickActionBack">#2F2D2E</color>
+    <color name="ColorIcons">#A4A4A4</color>
+    <color name="ColorTextSubTitle">#CECECE</color>
+    <color name="ColorDefaultNote">#333333</color>
+    <color name="ColorNoteSubtitleText">#FAFAFA</color>
+    <color name="MiscBg">#1F1F1F</color>
+    <color name="ColorNote2">#FDBE3B</color>
+    <color name="ColorNote3">#FF4842</color>
+    <color name="ColorNote4">#3A52Fc</color>
+    <color name="ColorNote5">#000000</color>
+    <color name="ColorDelete">#FF4842</color>
+    <color name="ColorSearchBg">#333333</color>
+    <color name="ColorPositive">#1B9820</color>
+    <color name="ColorNote6">#9C27B0</color>
+
+
+</resources>

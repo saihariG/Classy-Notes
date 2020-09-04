@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "759531774510",
+    "firebase_url": "https://classy-notes.firebaseio.com",
+    "project_id": "classy-notes",
+    "storage_bucket": "classy-notes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759531774510:android:e92e13902b04a306bff5bf",
+        "android_client_info": {
+          "package_name": "com.classyinc.classynotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759531774510-aqs99cg83g73hrnngatclf78hpbfqbdm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classyinc.classynotes",
+            "certificate_hash": "9c932936d2b696202ab0fbbbfe2f45bf491ab72a"
+          }
+        },
+        {
+          "client_id": "759531774510-pqgtkk2rcjagtahfgrhmldeem776ud8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRrBoU1YoABhXAv5FjMqoDmgpp7xAnAHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759531774510-pqgtkk2rcjagtahfgrhmldeem776ud8p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

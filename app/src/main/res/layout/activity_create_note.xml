@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateNoteActivity"
+    android:background="@color/ColorDark">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+
+        app:layout_anchorGravity="center"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:id="@+id/cons_id">
+
+            <ImageView
+                android:id="@+id/imgback_id"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/ColorIcons" />
+
+            <ImageView
+                android:id="@+id/imageDeleteNote_id"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="@+id/imgback_id"
+                app:layout_constraintEnd_toStartOf="@+id/imageColorDropdown_id"
+                app:layout_constraintTop_toTopOf="@+id/imgback_id"
+                app:tint="@color/ColorDelete"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/imageColorDropdown_id"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_color_lens_24"
+                app:layout_constraintBottom_toBottomOf="@+id/imgback_id"
+                app:layout_constraintEnd_toStartOf="@+id/img_id"
+                app:layout_constraintTop_toTopOf="@+id/imgback_id"
+                app:tint="@color/ColorWhite"
+                android:visibility="visible"/>
+
+
+            <ImageView
+                android:id="@+id/img_id"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_image"
+                app:layout_constraintBottom_toBottomOf="@+id/imgback_id"
+                app:layout_constraintEnd_toStartOf="@+id/imglang_id"
+                app:layout_constraintTop_toTopOf="@+id/imgback_id"
+                app:tint="@color/ColorIcons" />
+
+            <ImageView
+                android:id="@+id/imglang_id"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_language"
+                app:layout_constraintBottom_toBottomOf="@+id/imgback_id"
+                app:layout_constraintEnd_toStartOf="@+id/img_done_id"
+                app:layout_constraintTop_toTopOf="@+id/imgback_id"
+                app:tint="@color/ColorIcons" />
+
+            <ImageView
+                android:id="@+id/img_done_id"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/background_done_btn"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_done"
+                app:layout_constraintBottom_toBottomOf="@+id/imgback_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgback_id"
+                app:tint="@color/ColorWhite" />
+
+            <EditText
+                android:id="@+id/inputnoteTitle_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@null"
+                android:fontFamily="@font/ubuntu_bold"
+                android:hint="@string/title"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:textColor="@color/ColorWhite"
+                android:textColorHint="@color/ColorIcons"
+                android:textSize="@dimen/_16ssp"
+                android:maxLength="50"
+                app:layout_constraintTop_toBottomOf="@+id/imgback_id" />
+
+            <TextView
+                android:id="@+id/txtDateTime_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:includeFontPadding="false"
+                android:textColor="@color/ColorIcons"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="@+id/inputnoteTitle_id"
+                app:layout_constraintStart_toStartOf="@id/inputnoteTitle_id"
+                app:layout_constraintTop_toBottomOf="@id/inputnoteTitle_id" />
+
+            <EditText
+                android:id="@+id/inputnoteSubTitle_id"
+                android:maxLength="250"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@null"
+                android:fontFamily="@font/ubuntu_medium"
+                android:hint="@string/sub_title"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="@color/ColorNoteSubtitleText"
+                android:textColorHint="@color/ColorIcons"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/viewsubtitleindicator_id"
+                app:layout_constraintTop_toBottomOf="@+id/txtDateTime_id" />
+
+            <View
+                android:id="@+id/viewsubtitleindicator_id"
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:background="@drawable/background_subtitle_indicator"
+                app:layout_constraintBottom_toBottomOf="@+id/inputnoteSubTitle_id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/inputnoteSubTitle_id" />
+
+
+        <!--    <ImageView
+                android:id="@+id/arrowdown_id"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/ic_arrow_drop_down"
+                app:layout_constraintBottom_toBottomOf="@+id/txtDatetime_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/inputnoteSubTitle_id"
+                app:layout_constraintTop_toTopOf="@+id/inputnoteSubTitle_id"
+                tools:ignore="UnknownIdInLayout"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/ColorIcons" /> -->
+
+            <ImageView
+                android:id="@+id/imageNote_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/layout_expandable_notecolor_id" />
+
+            <ImageView
+                android:id="@+id/imgRemoveImage_id"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/background_delete"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_close"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/imageNote_id"
+                app:layout_constraintTop_toTopOf="@+id/imageNote_id"
+                app:tint="@color/ColorWhite" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_webUrl_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/imageNote_id"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/txtwebUrl_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="web"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_13ssp" />
+
+                <ImageView
+                    android:id="@+id/imageRemoveWebURL_id"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/ColorDelete" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_expandable_notecolor_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/inputnoteSubTitle_id"
+                android:visibility="gone"
+                android:baselineAligned="false">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/viewcolor1"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/background_notecolor_1" />
+
+                    <ImageView
+                        android:id="@+id/imagecolor1"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_done"
+                        app:tint="@color/ColorWhite" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/viewcolor2"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/background_notecolor_2" />
+
+                    <ImageView
+                        android:id="@+id/imagecolor2"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        app:tint="@color/ColorWhite" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/viewcolor3"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/background_notecolor_3" />
+
+                    <ImageView
+                        android:id="@+id/imagecolor3"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        app:tint="@color/ColorWhite" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/viewcolor4"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/background_notecolor_4" />
+
+                    <ImageView
+                        android:id="@+id/imagecolor4"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        app:tint="@color/ColorWhite" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/viewcolor5"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/background_notecolor_5" />
+
+                    <ImageView
+                        android:id="@+id/imagecolor5"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        app:tint="@color/ColorWhite" />
+
+                </FrameLayout>
+
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/viewcolor6"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/background_notecolor_6" />
+
+                    <ImageView
+                        android:id="@+id/imagecolor6"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        app:tint="@color/ColorWhite" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/viewcolor7"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/background_notecolor_7" />
+
+                    <ImageView
+                        android:id="@+id/imagecolor7"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        app:tint="@android:color/black" />
+
+                </FrameLayout>
+
+
+                <!--    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/pick_color"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/_13ssp" /> -->
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/inputnote_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@null"
+                android:fontFamily="@font/ubuntu_regular"
+                android:gravity="top"
+                android:hint="@string/type_description_here"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:minHeight="@dimen/_100sdp"
+                android:textColor="@color/ColorWhite"
+                android:textColorHint="@color/ColorIcons"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_webUrl_id"
+                android:maxLength="800"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/fb_banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        />
+    <!-- <include layout="@layout/layout_misc"/> -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

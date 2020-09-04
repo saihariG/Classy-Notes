@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:background="@color/ColorDark"
+    android:id="@+id/drawer_layout_id">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_toolbar"
+            android:id="@+id/toolbar_id"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragmentcontainer_id"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view_id"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"
+        tools:ignore="MissingConstraints"
+        android:background="#f5fffa"
+        app:itemIconTint="@color/ColorIcons">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connect with us"
+                android:gravity="center"
+                android:textColor="@color/ColorWhite"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:padding="@dimen/_5sdp"
+                tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:padding="@dimen/_7sdp">
+
+
+            <ImageView
+                android:id="@+id/gmail_id"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:src="@drawable/ic_gmail"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:contentDescription="@string/my_notes"/>
+
+
+            <ImageView
+                android:id="@+id/insta_id"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/ic_instagram_sketched"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:contentDescription="@string/my_notes" />
+
+            <ImageView
+                android:id="@+id/twitter_id"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic__linkedin"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:contentDescription="@string/my_notes"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

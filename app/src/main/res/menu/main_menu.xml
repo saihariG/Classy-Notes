@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/nav_note_id"
+            android:icon="@drawable/ic_baseline_note_24"
+            android:title="@string/notes" />
+
+     <!--   <item
+            android:id="@+id/nav_todo_id"
+            android:icon="@drawable/ic_baseline_event_note_24"
+            android:title="@string/to_do" />
+
+        <item
+            android:id="@+id/nav_list_id"
+            android:icon="@drawable/ic_baseline_format_list_numbered_24"
+            android:title="@string/lists" /> -->
+
+    </group>
+
+                  <group>
+
+                     <item
+                         android:id="@+id/nav_share_id"
+                         android:title="@string/share"
+                         android:icon="@drawable/ic_baseline_share_24"/>
+
+                      <item android:id="@+id/nav_settings_id"
+                          android:title="Settings"
+                          android:icon="@drawable/ic_baseline_settings_24"/>
+
+                  </group>
+
+
+
+  <!--  <item android:title="@string/classy_fam"
+        android:id="@+id/classyFam">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/classytreasurer_id"
+                    android:title="@string/income_and_expense_tracker"
+                    android:icon="@drawable/ic_original"/>
+
+            </group>
+        </menu>
+    </item> -->
+
+</menu>
