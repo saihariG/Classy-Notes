@@ -95,11 +95,11 @@ public class NotesFragment extends Fragment implements NotesListener {
 
         ShowGoogleBannerAds(myview);
 
-       /*** MobileAds.initialize(getActivity(), "ca-app-pub-3940256099942544~3347511713");
-
-        final AdView NotesBannerAD =  myview.findViewById(R.id.notes_ad_id);
-
-        NotesBannerAD.loadAd(new AdRequest.Builder().build()); ***/
+        /**
+         * MobileAds.initialize(getActivity(), "ca-app-pub-3940256099942544~3347511713");
+         * final AdView NotesBannerAD =  myview.findViewById(R.id.notes_ad_id);
+         *  NotesBannerAD.loadAd(new AdRequest.Builder().build());
+         */
 
        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
 
@@ -140,7 +140,7 @@ public class NotesFragment extends Fragment implements NotesListener {
                 counter++;
                 if (counter == 6) {
                     counter = 0;
-                    //ShowGoogleInterstitialAd();
+                    ShowGoogleInterstitialAd();
 
                     if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
 
@@ -380,7 +380,7 @@ public class NotesFragment extends Fragment implements NotesListener {
         counter++;
         if(counter == 6) {
             counter = 0;
-            //ShowGoogleInterstitialAd();
+            ShowGoogleInterstitialAd();
             if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
 
                 ShowFBInterstitialAd();

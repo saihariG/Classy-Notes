@@ -50,15 +50,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView = findViewById(R.id.nav_view_id);
 
-        //Menu menu = navigationView.getMenu();
-       // MenuItem tools = menu.findItem(R.id.classyFam);
-        //MenuItem support = menu.findItem(R.id.Support_id);
-        //SpannableString s = new SpannableString(tools.getTitle());
-        //SpannableString s1 = new SpannableString(support.getTitle());
-       // s.setSpan(new TextAppearanceSpan(this,R.style.groupColor),0,s.length(),0);
-        //s1.setSpan(new TextAppearanceSpan(this,R.style.groupColor),0,s1.length(),0);
-        //support.setTitle(s1);
-        //tools.setTitle(s);
+    /**
+        Menu menu = navigationView.getMenu();
+        MenuItem tools = menu.findItem(R.id.classyFam);
+        MenuItem support = menu.findItem(R.id.Support_id);
+        SpannableString s = new SpannableString(tools.getTitle());
+        SpannableString s1 = new SpannableString(support.getTitle());
+        s.setSpan(new TextAppearanceSpan(this,R.style.groupColor),0,s.length(),0);
+        s1.setSpan(new TextAppearanceSpan(this,R.style.groupColor),0,s1.length(),0);
+        support.setTitle(s1);
+        tools.setTitle(s); ***/
+
+
         navigationView.setNavigationItemSelectedListener(this);
 
         ImageView img_gmail = findViewById(R.id.gmail_id);
